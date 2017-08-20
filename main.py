@@ -44,7 +44,7 @@ name="ig"></br></br>
 class library(ndb.Model):
      clientname = ndb.StringProperty(indexed=True)
      emailid = ndb.StringProperty(indexed=True)
-     id = ndb.StringProperty(indexed=True)
+     lid = ndb.StringProperty(indexed=True)
      bookname = ndb.StringProperty(indexed=True)
      interestedgenre = ndb.StringProperty(indexed=True)	 
      when = ndb.DateTimeProperty(auto_now_add=True)
@@ -68,7 +68,7 @@ class MainHandler(webapp2.RequestHandler):
      lib= library()
      lib.clientname=Clientname
      lib.emailid=emailid
-     lib.id=bookid
+     lib.lid=bookid
      lib.bookname=bookname
      lib.interestedgenre=intgen
      lib.put()
